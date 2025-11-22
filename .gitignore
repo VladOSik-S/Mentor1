@@ -1,0 +1,166 @@
+# Binaries for Go programs
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+menti-hub
+menti-hub.exe
+
+# Go test binary, built with `go test -c`
+*.test
+
+# Go coverage
+*.out
+coverage.txt
+coverage.html
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Air live reload
+tmp/
+
+# Dependencies
+vendor/
+
+# Node.js / React
+_ui/node_modules/
+_ui/npm-debug.log*
+_ui/yarn-debug.log*
+_ui/yarn-error.log*
+_ui/pnpm-debug.log*
+_ui/lerna-debug.log*
+_ui/package-lock.json
+_ui/yarn.lock
+_ui/pnpm-lock.yaml
+
+# React Build
+_ui/build/
+_ui/dist/
+_ui/.cache/
+
+# Testing
+_ui/coverage/
+_ui/.nyc_output/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IDE - JetBrains (GoLand, WebStorm, etc)
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# IDE - Vim
+*.swp
+*.swo
+*~
+
+# IDE - Emacs
+*~
+\#*\#
+.\#*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+.Trash-*
+.nfs*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Build directories
+build/
+dist/
+out/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Debug
+debug/
+*.pprof
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# API Documentation (если генерируется автоматически)
+# docs/swagger/
+
+# Terraform (если используете)
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Certificates and keys
+*.pem
+*.key
+*.cert
+*.crt
+*.csr
+*.p12
+*.pfx
+
+# Backup files
+*.bak
+*.backup
+*~.nib
+
+# OS generated files
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+.vercel
+node_modules/
+

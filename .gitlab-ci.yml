@@ -1,0 +1,29 @@
+stages:
+  - deploy
+
+variables:
+  RAILWAY_PROJECT_ID: 33dfc163-642a-4a3a-8782-29233af35518
+  RAILWAY_SERVICE_ID: 9442153d-5ca0-430a-876d-c2f2d71436c8
+  CI: ""
+
+.railway_deploy:
+  stage: deploy
+  image: ghcr.io/railwayapp/cli:latest
+  script:
+    - railway up --service=$RAILWAY_SERVICE_ID --environment=$DEPLOY_ENV
+
+deploy-develop:
+  extends: .railway_deploy
+  variables:
+    DEPLOY_ENV: develop
+    RAILWAY_TOKEN: $RAILWAY_TOKEN_DEVELOP
+  rules:
+    - if: $CI_COMMIT_BRANCH == "develop"
+
+deploy-production:
+  extends: .railway_deploy
+  variables:
+    DEPLOY_ENV: production
+    RAILWAY_TOKEN: $RAILWAY_TOKEN_PROD
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
